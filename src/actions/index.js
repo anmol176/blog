@@ -27,10 +27,9 @@ export const searchPosts = () => async dispatch => {
 */
 
 //we pass in a single argument id because it is the ID of the user that we want to fetch.
-export const fetchUser = (id) => async dispatch => {
+export const fetchUser = id => async dispatch => {
     const response = await jsonPlaceholder.get(`/users/${id}`);
-    dispatch({type: 'FETCH_USER',payload: response.data});
-
-}
+    dispatch({ type: 'FETCH_USER', payload: response.data });
+  };
 
 
